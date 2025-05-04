@@ -2,7 +2,7 @@
 
 This project sets up a chatbot locally using [Ollama](https://ollama.com) and the qwen3 model.
 
-![Chatbot Screenshot](1.png)
+![Chatbot](1.png)
 
 ## Prerequisites
 
