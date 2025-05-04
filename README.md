@@ -1,4 +1,4 @@
-# Local Chatbot using Ollama and qwen3 Model
+# Local Reasoning Chatbot using Ollama and qwen3 Model
 
 This project sets up a chatbot locally using [Ollama](https://ollama.com) and the qwen3 model.
 
@@ -65,31 +65,12 @@ curl http://localhost:11434/api/generate -d '{
 }'
 ```
 
-### 5. Optional: Use with Frontend (e.g., Streamlit, Flask)
-
-You can build a simple interface using Python. Here's a basic Streamlit example:
-
-```python
-import requests
-import streamlit as st
-
-st.title("Local Chatbot (qwen3 0.6B)")
-
-prompt = st.text_input("You:", "")
-
-if prompt:
-    res = requests.post(
-        "http://localhost:11434/api/generate",
-        json={"model": "qwen3:0.6b", "prompt": prompt, "stream": False}
-    )
-    output = res.json()["response"]
-    st.text_area("Bot:", output)
-```
+### 5. Use with Frontend (e.g., Streamlit, Flask)
 
 Run with:
 
 ```bash
-streamlit run app.py
+streamlit run chat.py
 ```
 
 ---
